@@ -1,9 +1,9 @@
-package com.example.employee.service.impl;
+package pro.sky.employee.service.impl;
 
-import com.example.employee.data.Employee;
-import com.example.employee.exception.EmployeeExistsException;
-import com.example.employee.exception.EmployeeNotFoundException;
-import com.example.employee.service.EmployeeService;
+import pro.sky.employee.data.Employee;
+import pro.sky.employee.exception.EmployeeExistsException;
+import pro.sky.employee.exception.EmployeeNotFoundException;
+import pro.sky.employee.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -26,8 +26,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee add(Employee employee) {
-//        boolean employeeAlreadyExists = !employees.add(employee);
-        if (ifEmployeeAlreadyExists(employee)) {
+        boolean employeeAlreadyExists = !employees.add(employee);
+        if (employeeAlreadyExists){
             throw new EmployeeExistsException();
         }
         return employee;
@@ -58,15 +58,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Collection<Employee> getAll() {
-        return employees;
-    }
-
-    private boolean ifEmployeeAlreadyExists(Employee employee) {
-        for (Employee currentEmployee : employees) {
-            if (currentEmployee.equals(employee)) {
-                return false;
-            }
-        }
-        return true;
+        return Set.copyOf(employees);
     }
 }

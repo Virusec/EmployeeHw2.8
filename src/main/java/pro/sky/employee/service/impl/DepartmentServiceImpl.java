@@ -1,9 +1,9 @@
-package com.example.employee.service.impl;
+package pro.sky.employee.service.impl;
 
-import com.example.employee.data.Employee;
-import com.example.employee.exception.EmployeeNotFoundException;
-import com.example.employee.service.DepartmentService;
-import com.example.employee.service.EmployeeService;
+import pro.sky.employee.data.Employee;
+import pro.sky.employee.exception.EmployeeNotFoundException;
+import pro.sky.employee.service.DepartmentService;
+import pro.sky.employee.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

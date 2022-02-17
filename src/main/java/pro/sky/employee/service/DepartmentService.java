@@ -1,6 +1,6 @@
-package com.example.employee.service;
+package pro.sky.employee.service;
 
-import com.example.employee.data.Employee;
+import pro.sky.employee.data.Employee;
 
 import java.util.Collection;
 import java.util.List;

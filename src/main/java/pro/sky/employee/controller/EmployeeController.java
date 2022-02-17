@@ -1,15 +1,14 @@
-package com.example.employee.controller;
+package pro.sky.employee.controller;
 
 
-import com.example.employee.data.Employee;
-import com.example.employee.service.EmployeeService;
+import pro.sky.employee.data.Employee;
+import pro.sky.employee.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
-import java.util.Collections;
 
 @RestController
 @RequestMapping("/employee")

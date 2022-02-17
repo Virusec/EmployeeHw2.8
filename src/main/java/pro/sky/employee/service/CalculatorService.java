@@ -1,4 +1,4 @@
-package com.example.employee.service;
+package pro.sky.employee.service;
 
 public interface CalculatorService {
 }

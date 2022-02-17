@@ -1,4 +1,4 @@
-package com.example.employee.data;
+package pro.sky.employee.data;
 
 import java.util.Objects;
 
