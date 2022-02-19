@@ -52,12 +52,16 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return department == employee.department && salary == employee.salary && Objects.equals(firstName, employee.department);
+        return department == employee.department && salary
+                == employee.salary && Objects.equals(firstName,employee.department);
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + "\'" + ", department=" + department + ", salary=" + salary + '}';
+        return "Employee{" + "firstName='" + firstName + '\''
+                + ", lastName='" + lastName + "\'"
+                + ", department=" + department
+                + ", salary=" + salary + '}';
     }
 
     @Override

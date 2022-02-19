@@ -15,12 +15,4 @@ public class EmployeeNotFoundException extends RuntimeException{
         super(message);
     }
 
-    public EmployeeNotFoundException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public EmployeeNotFoundException(Throwable cause) {
-        super(cause);
-    }
-
 }
