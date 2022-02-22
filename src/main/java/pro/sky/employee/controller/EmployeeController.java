@@ -1,6 +1,7 @@
 package pro.sky.employee.controller;
 
 
+import org.apache.commons.lang3.StringUtils;
 import pro.sky.employee.data.Employee;
 import pro.sky.employee.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,9 @@ public class EmployeeController {
                       @RequestParam String lastName,
                       @RequestParam(name = "departmentId", required = false) int department,
                       @RequestParam(required = false) int salary) {
+        if (!StringUtils.isAlpha(firstName) || !StringUtils.isAlpha(lastName)) {
+            throw new IllegalArgumentException();
+        }
         Employee result = employeeService.add(firstName, lastName, department, salary);
         return generateMessage(result, "успешно создан");
     }
